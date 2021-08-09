@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Awesome Books</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./style.css">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <h1>Awesome Books</h1>
-    <ul id="list-items"></ul>
-    <form>
-      <label for="title-input">Title</label><br>
-      <input type="text" placeholder="Title" id="title-input"><br>
-      <label for="author-input">Author</label><br>
-      <input type="text" placeholder="Author" id="author-input"><br>
-      <button type="submit">Add Books</button>
+    <section class="list-books"></section>
+    <form id="book-form">
+      <label for="title">Title</label><br />
+      <input type="text" placeholder="Title" id="title" /><br />
+      <label for="author">Author</label><br />
+      <input type="text" placeholder="Author" id="author" /><br />
+      <button type="submit" class="add">Add Books</button>
     </form>
+    <script src="./Book.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
