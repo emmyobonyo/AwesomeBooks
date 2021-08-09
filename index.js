@@ -1,4 +1,8 @@
 const form = document.querySelector('#book-form');
+function Book(title, author) {
+  this.title = title;
+  this.author = author;
+}
 if (localStorage.getItem('booksData') !== null) {
   const booksData = JSON.parse(localStorage.getItem('booksData'));
   booksData.forEach((book) => {
