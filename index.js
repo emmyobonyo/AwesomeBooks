@@ -4,6 +4,7 @@ const form = document.querySelector('#book-form');
 class Books {
   constructor() {
     this.book = null;
+    this.id = null;
   }
 
   addBook(title, author) {
@@ -13,9 +14,10 @@ class Books {
     localStorage.setItem('booksData', JSON.stringify(oldData));
   }
 
-  removeBook(ide) {
+  removeBook(id) {
+    this.id = id;
     const booksData = JSON.parse(localStorage.getItem('booksData'));
-    booksData.splice(booksData.indexOf(id), 1);
+    booksData.splice(booksData.indexOf(this.id), 1);
     localStorage.setItem('booksData', JSON.stringify(booksData));
   }
 }
@@ -54,4 +56,4 @@ Array.from(document.querySelectorAll('.remove')).forEach((remove) => {
   remove.addEventListener('click', (event) => {
     event.target.parentNode.remove();
   });
-})
+});
