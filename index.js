@@ -1,7 +1,20 @@
 const form = document.querySelector('#book-form');
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
+class Book{
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
+class Books {
+  constructor(){
+    this.book=null;
+  }
+  addBook(title,author) {
+    this.book = new Book(title,author);
+    let oldData = JSON.parse(localStorage.getItem('booksData'));
+    oldData.push(this.book);
+    localStorage.setItem('booksData', JSON.stringify(oldData));
+  }
 }
 if (localStorage.getItem('booksData') !== null) {
   const booksData = JSON.parse(localStorage.getItem('booksData'));
@@ -29,13 +42,9 @@ if (localStorage.getItem('booksData') !== null) {
 document.querySelector('.add').addEventListener('click', () => {
   const titleInput = form.elements.title.value;
   const authorInput = form.elements.author.value;
-
-  const newbook = new Book(titleInput, authorInput);
-
   if (localStorage.getItem('booksData') === null) {
     localStorage.setItem('booksData', JSON.stringify([]));
   }
-  const oldData = JSON.parse(localStorage.getItem('booksData'));
-  oldData.push(newbook);
-  localStorage.setItem('booksData', JSON.stringify(oldData));
+  var newbook = new Books();
+  newbook.addBook(titleInput,authorInput);
 });
