@@ -12,10 +12,16 @@ class Books {
     oldData.push(this.book);
     localStorage.setItem('booksData', JSON.stringify(oldData));
   }
+
+  removeBook(ide) {
+    const booksData = JSON.parse(localStorage.getItem('booksData'));
+    booksData.splice(booksData.indexOf(id), 1);
+    localStorage.setItem('booksData', JSON.stringify(booksData));
+  }
 }
 if (localStorage.getItem('booksData') !== null) {
   const booksData = JSON.parse(localStorage.getItem('booksData'));
-  booksData.forEach((book) => {
+  booksData.forEach((book, id) => {
     const bookContainer = document.createElement('div');
     const bookTitle = document.createElement('p');
     const bookAuthor = document.createElement('p');
@@ -28,10 +34,9 @@ if (localStorage.getItem('booksData') !== null) {
     bookContainer.appendChild(remove);
     bookTitle.innerText = book.title;
     bookAuthor.innerText = book.author;
-
     remove.addEventListener('click', (event) => {
-      booksData.splice(booksData.indexOf(book), 1);
-      localStorage.setItem('booksData', JSON.stringify(booksData));
+      const removebook = new Books();
+      removebook.removeBook(id);
       event.target.parentNode.remove();
     });
   });
@@ -45,3 +50,8 @@ document.querySelector('.add').addEventListener('click', () => {
   const newbook = new Books();
   newbook.addBook(titleInput, authorInput);
 });
+Array.from(document.querySelectorAll('.remove')).forEach((remove) => {
+  remove.addEventListener('click', (event) => {
+    event.target.parentNode.remove();
+  });
+})
