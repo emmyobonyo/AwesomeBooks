@@ -1,19 +1,14 @@
+import Book from "./module/Book.js";
 const form = document.querySelector('#book-form');
-class Book{
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
 class Books {
-  constructor(){
+  constructor() {
     this.book=null;
   }
   addBook(title,author) {
-    this.book = new Book(title,author);
+    this.book = new Book(title,author,id);
     let oldData = JSON.parse(localStorage.getItem('booksData'));
     oldData.push(this.book);
-    localStorage.setItem('booksData', JSON.stringify(oldData));
+    localStorage.setItem('booksData', JSON.stringify(oldData));  
   }
 }
 if (localStorage.getItem('booksData') !== null) {
