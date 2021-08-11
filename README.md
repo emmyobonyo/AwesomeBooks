@@ -1,10 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Awesome Books Project
+![Demo](https://emmyobonyo.github.io/AwesomeBooks/)
 
 > A simple App that allows a user to efficiently organise all their books.
 
-![screenshot](./screenshot.png)
+![Main Page](./blank.png)
+![Books added](./books.png)
 
 - A User can add a Book.
 - A User can Remove a Book.

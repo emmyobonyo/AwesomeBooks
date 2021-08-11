@@ -68,6 +68,13 @@ hr {
   border-radius: 3px;
 }
 
+#book-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
 .add {
   padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: #EBC28B;
@@ -75,11 +82,12 @@ hr {
   border: none;
   font-weight: 600;
   margin-top: 0.5rem;
+  align-self: flex-end;
 }
 
 form input {
   padding: 0.5rem 0.2rem 0.2rem 0.5rem;
-  margin: 0.2rem auto 0.2rem auto;
+  margin: 0.5rem 0;
   border: none;
 }
 
@@ -88,11 +96,7 @@ form input {
     width: 50%;
   }
 
-  form input {
-    width: 70%;
-  }
-
   .add {
-    width: 50%;
+    width: 30%;
   }
 }
