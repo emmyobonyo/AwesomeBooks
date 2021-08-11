@@ -28,7 +28,6 @@ h2 {
 
 .list-books {
   border: 2px solid #36395d;
-  /* padding: 0.7rem; */
   border-radius: 0.5rem;
   z-index: 3;
 }
@@ -55,13 +54,13 @@ hr {
   margin-bottom: 1.5rem;
   width: 30%;
   height: 3px;
-  background-color: #85AFC1;
+  background-color: #85afc1;
 }
 
 .remove {
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
-  background-color: #EBC28B;
-  color: #50394D;
+  background-color: #ebc28b;
+  color: #50394d;
   border: none;
   font-size: 12px;
   font-weight: 600;
@@ -77,8 +76,8 @@ hr {
 
 .add {
   padding: 0.5rem 1rem 0.5rem 1rem;
-  background-color: #EBC28B;
-  color: #50394D;
+  background-color: #ebc28b;
+  color: #50394d;
   border: none;
   font-weight: 600;
   margin-top: 0.5rem;

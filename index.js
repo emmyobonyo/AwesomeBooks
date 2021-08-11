@@ -41,7 +41,7 @@ class Books {
         bookContainer.appendChild(bookInfo);
         bookContainer.appendChild(remove);
         bookTitle.innerText = book.title;
-        bookAuthor.innerText = "by " + book.author;
+        bookAuthor.innerText = `by ${book.author}`;
         remove.addEventListener('click', (event) => {
           this.removeBook(id);
           event.target.parentNode.remove();
@@ -61,11 +61,11 @@ document.querySelector('.add').addEventListener('click', () => {
   booksLibrary.addBook(titleInput, authorInput);
 });
 
-var rows = Array.from(document.querySelectorAll('.bookContainer'));
-for (var i = 0; i < rows.length; i++) {
-  if (i % 2 == 0) {
+const rows = Array.from(document.querySelectorAll('.bookContainer'));
+for (let i = 0; i < rows.length; i += 1) {
+  if (i % 2 === 0) {
     rows[i].style.backgroundColor = '#50394D';
-    rows[i].style.color = "white"
+    rows[i].style.color = 'white';
   } else {
     rows[i].style.backgroundColor = '#85AFC1';
   }
