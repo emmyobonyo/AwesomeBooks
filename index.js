@@ -27,17 +27,21 @@ class Books {
       this.booksData = JSON.parse(localStorage.getItem('booksData'));
       this.booksData.forEach((book, id) => {
         const bookContainer = document.createElement('div');
+        bookContainer.className = 'bookContainer';
         const bookTitle = document.createElement('p');
         const bookAuthor = document.createElement('p');
+        const bookInfo = document.createElement('div');
+        bookInfo.className = 'bookInfo';
         const remove = document.createElement('button');
         remove.className = 'remove';
         remove.innerText = 'Remove';
         document.querySelector('.list-books').appendChild(bookContainer);
-        bookContainer.appendChild(bookTitle);
-        bookContainer.appendChild(bookAuthor);
+        bookInfo.appendChild(bookTitle);
+        bookInfo.appendChild(bookAuthor);
+        bookContainer.appendChild(bookInfo);
         bookContainer.appendChild(remove);
         bookTitle.innerText = book.title;
-        bookAuthor.innerText = book.author;
+        bookAuthor.innerText = "by " + book.author;
         remove.addEventListener('click', (event) => {
           this.removeBook(id);
           event.target.parentNode.remove();
@@ -56,3 +60,13 @@ document.querySelector('.add').addEventListener('click', () => {
   }
   booksLibrary.addBook(titleInput, authorInput);
 });
+
+var rows = Array.from(document.querySelectorAll('.bookContainer'));
+for (var i = 0; i < rows.length; i++) {
+  if (i % 2 == 0) {
+    rows[i].style.backgroundColor = '#50394D';
+    rows[i].style.color = "white"
+  } else {
+    rows[i].style.backgroundColor = '#85AFC1';
+  }
+}
