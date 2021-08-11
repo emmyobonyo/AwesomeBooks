@@ -1,65 +1,35 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome Books Project
+![Demo](https://emmyobonyo.github.io/AwesomeBooks/)
 
-> One paragraph statement about the project.
+> A simple App that allows a user to efficiently organise all their books.
 
-![screenshot](./app_screenshot.png)
+![Main Page](./blank.png)
+![Books added](./books.png)
 
-Additional description about the project and its features.
+- A User can add a Book.
+- A User can Remove a Book.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
+- Javascript, HTML and CSS
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+- In terminal or Command line. Navigate to a directory in your local storage where you'd like to store the project and paste ```https://github.com/emmyobonyo/AwesomeBooks.git```
+- Navigate to the ```index.html``` file and open it in your favourite browser.
 
+👤 **Amine Smahi**
 
-To get a local copy up and running follow these simple example steps.
+- GitHub: [@medaminedev66](https://github.com/medaminedev66 )
+- LinkedIn: [Amine Smahi](https://www.linkedin.com/in/mohammed-amine-smahi-1b8615187/)
 
-### Prerequisites
+👤 **EMmanuel Obonyo**
 
-### Setup
+- GitHub: [@emmyobonyo](https://github.com/emmyobonyo)
+- Twitter: [@emmyobonyo](https://twitter.com/emmyobonyo)
+- LinkedIn: [Emmanuel Obonyo](https://www.linkedin.com/in/emmanuel-obonyo-3728a2200/)
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
@@ -67,9 +37,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Thanks to [Microverse](https://github.com/emmyobonyo)
 
 ## 📝 License
 
