@@ -50,6 +50,7 @@ ul {
 
 li {
   margin-right: 2rem;
+  cursor: pointer;
 }
 
 h1,

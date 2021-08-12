@@ -5,7 +5,7 @@ const add = document.querySelector('.add-new');
 const contact = document.querySelector('.contact');
 const lists = () => {
   console.log("clicked");
-  document.querySelector('.add-book').classList.add('invisible');
+  document.querySelector('.addyy').classList.add('invisible');
   document.querySelector('.contact-section').classList.add('invisible');
 }
 const action = (act, str) => {
@@ -99,5 +99,5 @@ for (let i = 0; i < rows.length; i += 1) {
 }
 
 action(list, "list");
-// action(add, "add");
-// action(contact, "contact")
+action(add, "add");
+action(contact, "contact")
