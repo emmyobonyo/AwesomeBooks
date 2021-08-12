@@ -5,6 +5,7 @@
 
 > A simple App that allows a user to efficiently organise all their books.
 
+![Main Page](./navigation.png)
 ![Main Page](./blank.png)
 ![Books added](./books.png)
 
