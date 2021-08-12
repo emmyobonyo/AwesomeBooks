@@ -1,5 +1,32 @@
 import Book from './module/Book.js';
 
+const list = document.querySelector('.list');
+const add = document.querySelector('.add-new');
+const contact = document.querySelector('.contact');
+const lists = () => {
+  console.log("clicked");
+  document.querySelector('.add-book').classList.add('invisible');
+  document.querySelector('.contact-section').classList.add('invisible');
+}
+const action = (act, str) => {
+  act.addEventListener('click', () => {
+    console.log("Event happened");
+    switch (str) {
+      case "list":
+        console.log("case : list");
+        lists();
+        break;
+      case "add":
+        add();
+        break;
+      case "contact":
+        contact();
+        break;
+      default:
+        break;
+    }
+  });
+}
 const form = document.querySelector('#book-form');
 class Books {
   constructor() {
@@ -64,9 +91,13 @@ document.querySelector('.add').addEventListener('click', () => {
 const rows = Array.from(document.querySelectorAll('.bookContainer'));
 for (let i = 0; i < rows.length; i += 1) {
   if (i % 2 === 0) {
-    rows[i].style.backgroundColor = '#50394D';
+    rows[i].style.backgroundColor = '#36395D';
     rows[i].style.color = 'white';
   } else {
     rows[i].style.backgroundColor = '#85AFC1';
   }
 }
+
+action(list, "list");
+// action(add, "add");
+// action(contact, "contact")
