@@ -1,5 +1,7 @@
 import Book from './module/Book.js';
+import { DateTime } from './luxon.min.js';
 
+const dates = document.getElementById('date')
 const list = document.querySelector('.list');
 const add = document.querySelector('.add-new');
 const contact = document.querySelector('.contact');
@@ -36,6 +38,11 @@ const action = (act, str) => {
     }
   });
 }
+
+const date = DateTime.fromISO("2010-10-22T21:38:00" );
+const humanRead = date.toLocaleString(DateTime.DATETIME_MED);
+dates.innerHTML = humanRead;
+
 const form = document.querySelector('#book-form');
 class Books {
   constructor() {
