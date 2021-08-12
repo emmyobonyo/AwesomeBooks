@@ -1,6 +1,6 @@
 import Book from './module/Book.js';
 import {
-  DateTime
+  DateTime,
 } from './luxon.min.js';
 
 const dates = document.getElementById('date');
@@ -8,19 +8,19 @@ const list = document.querySelector('.list');
 const add = document.querySelector('.add-new');
 const contact = document.querySelector('.contact');
 const lists = () => {
-  document.querySelector('.addyy').classList.remove('visible');
+  document.querySelector('.add-section').classList.remove('visible');
   document.querySelector('.contact-section').classList.remove('visible');
   document.querySelector('.books').classList.remove('invisible');
 };
 const adds = () => {
-  document.querySelector('.addyy').classList.add('visible');
+  document.querySelector('.add-section').classList.add('visible');
   document.querySelector('.books').classList.add('invisible');
   document.querySelector('.contact-section').classList.remove('visible');
 };
 const contacts = () => {
   document.querySelector('.contact-section').classList.add('visible');
   document.querySelector('.books').classList.add('invisible');
-  document.querySelector('.addyy').classList.remove('visible');
+  document.querySelector('.add-section').classList.remove('visible');
 };
 const action = (act, str) => {
   act.addEventListener('click', () => {

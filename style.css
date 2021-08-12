@@ -22,11 +22,22 @@ body {
 header {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 100px;
   background-color: #ebc28b;
   color: #382935;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
 }
 
 main {
@@ -43,6 +54,7 @@ footer {
   width: 100%;
   height: 80px;
   background-color: #ebc28b;
+  padding-left: 2rem;
   color: #382935;
   display: flex;
   align-items: center;
@@ -55,12 +67,17 @@ ul {
 }
 
 li {
-  margin-right: 2rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   cursor: pointer;
 }
 
+li:hover {
+  border-bottom: 2px solid #50394d;
+}
+
 h1 {
-  margin-left: 2rem;
+  margin-left: 0.8rem;
 }
 
 h2 {
@@ -144,11 +161,12 @@ form input {
   right: 0;
 }
 
-.addyy {
+.add-section {
   display: none;
 }
 
 .contact-section {
+  color: white;
   display: none;
 }
 
@@ -157,7 +175,34 @@ form input {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    padding: 0;
+    flex-direction: row;
+    height: 80px;
+  }
+
+  li {
+    margin: 0;
+    margin-right: 2rem;
+  }
+
+  .logo {
+    margin-left: 2rem;
+  }
+
   .add {
     width: 30%;
+  }
+
+  .books {
+    padding: 0 10rem 0 10rem;
+  }
+
+  .add-section {
+    padding: 0 10rem 0 10rem;
+  }
+
+  .contact-section {
+    padding: 0 10rem 0 10rem;
   }
 }
