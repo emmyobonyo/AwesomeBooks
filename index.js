@@ -1,24 +1,26 @@
 import Book from './module/Book.js';
-import { DateTime } from './luxon.min.js';
+import {
+  DateTime
+} from './luxon.min.js';
 
 const dates = document.getElementById('date');
 const list = document.querySelector('.list');
 const add = document.querySelector('.add-new');
 const contact = document.querySelector('.contact');
 const lists = () => {
-  document.querySelector('.addyy').classList.add('invisible');
-  document.querySelector('.contact-section').classList.add('invisible');
-  document.querySelector('.list-books').classList.remove('invisible');
+  document.querySelector('.addyy').classList.remove('visible');
+  document.querySelector('.contact-section').classList.remove('visible');
+  document.querySelector('.books').classList.remove('invisible');
 };
 const adds = () => {
-  document.querySelector('.addyy').classList.remove('invisible');
-  document.querySelector('.list-books').classList.add('invisible');
-  document.querySelector('.contact-section').classList.add('invisible');
+  document.querySelector('.addyy').classList.add('visible');
+  document.querySelector('.books').classList.add('invisible');
+  document.querySelector('.contact-section').classList.remove('visible');
 };
 const contacts = () => {
-  document.querySelector('.contact-section').classList.remove('invisible');
-  document.querySelector('.list-books').classList.add('invisible');
-  document.querySelector('.addyy').classList.add('invisible');
+  document.querySelector('.contact-section').classList.add('visible');
+  document.querySelector('.books').classList.add('invisible');
+  document.querySelector('.addyy').classList.remove('visible');
 };
 const action = (act, str) => {
   act.addEventListener('click', () => {
@@ -106,7 +108,7 @@ document.querySelector('.add').addEventListener('click', () => {
 const rows = Array.from(document.querySelectorAll('.bookContainer'));
 for (let i = 0; i < rows.length; i += 1) {
   if (i % 2 === 0) {
-    rows[i].style.backgroundColor = '#36395D';
+    rows[i].style.backgroundColor = '#50394d';
     rows[i].style.color = 'white';
   } else {
     rows[i].style.backgroundColor = '#85AFC1';
