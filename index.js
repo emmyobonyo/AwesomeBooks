@@ -4,23 +4,32 @@ const list = document.querySelector('.list');
 const add = document.querySelector('.add-new');
 const contact = document.querySelector('.contact');
 const lists = () => {
-  console.log("clicked");
   document.querySelector('.addyy').classList.add('invisible');
   document.querySelector('.contact-section').classList.add('invisible');
+  document.querySelector('.list-books').classList.remove('invisible');
+}
+const adds = () => {
+  document.querySelector('.addyy').classList.remove('invisible');
+  document.querySelector('.list-books').classList.add('invisible');
+  document.querySelector('.contact-section').classList.add('invisible');
+}
+const contacts = () => {
+  document.querySelector('.contact-section').classList.remove('invisible');
+  document.querySelector('.list-books').classList.add('invisible');
+  document.querySelector('.addyy').classList.add('invisible');
 }
 const action = (act, str) => {
   act.addEventListener('click', () => {
-    console.log("Event happened");
     switch (str) {
       case "list":
         console.log("case : list");
         lists();
         break;
       case "add":
-        add();
+        adds();
         break;
       case "contact":
-        contact();
+        contacts();
         break;
       default:
         break;
