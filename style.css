@@ -137,8 +137,6 @@ form input {
 }
 
 @media screen and (min-width: 768px) {
-  body {}
-
   .add {
     width: 30%;
   }

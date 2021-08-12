@@ -1,7 +1,7 @@
 import Book from './module/Book.js';
 import { DateTime } from './luxon.min.js';
 
-const dates = document.getElementById('date')
+const dates = document.getElementById('date');
 const list = document.querySelector('.list');
 const add = document.querySelector('.add-new');
 const contact = document.querySelector('.contact');
@@ -9,37 +9,36 @@ const lists = () => {
   document.querySelector('.addyy').classList.add('invisible');
   document.querySelector('.contact-section').classList.add('invisible');
   document.querySelector('.list-books').classList.remove('invisible');
-}
+};
 const adds = () => {
   document.querySelector('.addyy').classList.remove('invisible');
   document.querySelector('.list-books').classList.add('invisible');
   document.querySelector('.contact-section').classList.add('invisible');
-}
+};
 const contacts = () => {
   document.querySelector('.contact-section').classList.remove('invisible');
   document.querySelector('.list-books').classList.add('invisible');
   document.querySelector('.addyy').classList.add('invisible');
-}
+};
 const action = (act, str) => {
   act.addEventListener('click', () => {
     switch (str) {
-      case "list":
-        console.log("case : list");
+      case 'list':
         lists();
         break;
-      case "add":
+      case 'add':
         adds();
         break;
-      case "contact":
+      case 'contact':
         contacts();
         break;
       default:
         break;
     }
   });
-}
+};
 
-const date = DateTime.fromISO("2010-10-22T21:38:00" );
+const date = DateTime.fromISO('2010-10-22T21:38:00');
 const humanRead = date.toLocaleString(DateTime.DATETIME_MED);
 dates.innerHTML = humanRead;
 
@@ -114,6 +113,6 @@ for (let i = 0; i < rows.length; i += 1) {
   }
 }
 
-action(list, "list");
-action(add, "add");
-action(contact, "contact")
+action(list, 'list');
+action(add, 'add');
+action(contact, 'contact');
