@@ -2,33 +2,91 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Gentium Book Basic', serif;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   margin: auto;
   text-align: center;
   background-color: #36395d;
 }
 
-h1,
-h2 {
-  color: white;
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: #ebc28b;
+  color: #382935;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+main {
+  height: 100%;
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #ebc28b;
+  padding-left: 2rem;
+  color: #382935;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+li {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+li:hover {
+  border-bottom: 2px solid #50394d;
 }
 
 h1 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-left: 0.8rem;
 }
 
 h2 {
+  color: white;
   margin-bottom: 0.5rem;
 }
 
 .list-books {
-  border: 2px solid #36395d;
-  border-radius: 0.5rem;
+  border: 2px solid white;
   z-index: 3;
 }
 
@@ -90,12 +148,61 @@ form input {
   border: none;
 }
 
+.invisible {
+  display: none;
+}
+
+#date {
+  position: absolute;
+  padding: 1rem 1rem 0;
+  font-size: 18px;
+  color: white;
+  top: 0;
+  right: 0;
+}
+
+.add-section {
+  display: none;
+}
+
+.contact-section {
+  color: white;
+  display: none;
+}
+
+.visible {
+  display: inline;
+}
+
 @media screen and (min-width: 768px) {
-  body {
-    width: 50%;
+  header {
+    padding: 0;
+    flex-direction: row;
+    height: 80px;
+  }
+
+  li {
+    margin: 0;
+    margin-right: 2rem;
+  }
+
+  .logo {
+    margin-left: 2rem;
   }
 
   .add {
     width: 30%;
+  }
+
+  .books {
+    padding: 0 10rem 0 10rem;
+  }
+
+  .add-section {
+    padding: 0 10rem 0 10rem;
+  }
+
+  .contact-section {
+    padding: 0 10rem 0 10rem;
   }
 }

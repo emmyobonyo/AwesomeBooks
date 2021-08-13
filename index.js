@@ -1,4 +1,48 @@
 import Book from './module/Book.js';
+import {
+  DateTime,
+} from './luxon.min.js';
+
+const dates = document.getElementById('date');
+const list = document.querySelector('.list');
+const add = document.querySelector('.add-new');
+const contact = document.querySelector('.contact');
+const lists = () => {
+  document.querySelector('.add-section').classList.remove('visible');
+  document.querySelector('.contact-section').classList.remove('visible');
+  document.querySelector('.books').classList.remove('invisible');
+};
+const adds = () => {
+  document.querySelector('.add-section').classList.add('visible');
+  document.querySelector('.books').classList.add('invisible');
+  document.querySelector('.contact-section').classList.remove('visible');
+};
+const contacts = () => {
+  document.querySelector('.contact-section').classList.add('visible');
+  document.querySelector('.books').classList.add('invisible');
+  document.querySelector('.add-section').classList.remove('visible');
+};
+const action = (act, str) => {
+  act.addEventListener('click', () => {
+    switch (str) {
+      case 'list':
+        lists();
+        break;
+      case 'add':
+        adds();
+        break;
+      case 'contact':
+        contacts();
+        break;
+      default:
+        break;
+    }
+  });
+};
+
+const date = DateTime.fromISO('2010-10-22T21:38:00');
+const humanRead = date.toLocaleString(DateTime.DATETIME_MED);
+dates.innerHTML = humanRead;
 
 const form = document.querySelector('#book-form');
 class Books {
@@ -64,9 +108,13 @@ document.querySelector('.add').addEventListener('click', () => {
 const rows = Array.from(document.querySelectorAll('.bookContainer'));
 for (let i = 0; i < rows.length; i += 1) {
   if (i % 2 === 0) {
-    rows[i].style.backgroundColor = '#50394D';
+    rows[i].style.backgroundColor = '#50394d';
     rows[i].style.color = 'white';
   } else {
     rows[i].style.backgroundColor = '#85AFC1';
   }
 }
+
+action(list, 'list');
+action(add, 'add');
+action(contact, 'contact');

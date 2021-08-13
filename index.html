@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Awesome Books</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <h1>Awesome Books</h1>
-    <div class="list-books"></div>
-    <hr>
-    <h2>Add a new book</h2>
-    <form id="book-form">
-      <input type="text" placeholder="Title" id="title" /><br />
-      <input type="text" placeholder="Author" id="author" /><br />
-      <button type="submit" class="add">Add Books</button>
-    </form>
-    <script type="module" src="./index.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Awesome Books</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="./img/book.png" alt="book icon">
+      <h1>Awesome Books</h1>
+    </div>
+    <nav>
+      <ul>
+        <li class="list">List</li>
+        <li class="add-new">Add new</li>
+        <li class="contact">Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <p id="date"></p>
+    <section class="books">
+      <h2>the list of Books</h2>
+      <div class="list-books"></div>
+    </section>
+    <section class="add-section">
+      <h2>Add a new book</h2>
+      <form id="book-form">
+        <input type="text" placeholder="Title" id="title" /><br />
+        <input type="text" placeholder="Author" id="author" /><br />
+        <button type="submit" class="add">Add Books</button>
+      </form>
+    </section>
+    <section class="contact-section">
+      <h2>Contact us</h2>
+      <p>Email: somethingcool@somethingcool.com</p>
+      <p>Tel: 0789-10-16-88</p>
+    </section>
+  </main>
+  <footer>
+    <p>CopyRight...</p>
+  </footer>
+  <script type="module" src="./index.js"></script>
+</body>
+
 </html>
